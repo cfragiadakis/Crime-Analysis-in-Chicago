@@ -76,7 +76,7 @@ Using a bar chart of Plotly, we can find out which area records the most crime i
 
 West Side is by far the busiest area, and on the contrary, the least crime incidents are recorded in the north. 
 
-More plots and further analysis is available on the dashboards files.
+More plots and further analysis are available on the dashboards files.
 
 
 
