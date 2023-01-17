@@ -1,7 +1,7 @@
 # Chicago Crime Analysis 
 * According to reports, Chicago is the 3rd most popular city in the USA, but is also considered as one of the violent ones. With population of 2.7M, Chicago is densely populated, and that has a direct impact on the crime rate. However, the crimes in the city are not evenly distributed, depending on various factors. It is important to find the location, the time and the type of crimes that are taking place. For this reason, we are going to embark on an exploratory data analysis of crimes in Chicago, and also make predictions about the type of crimes in this city. 
 * Data source: 
-The data for this analysis is taken from the source [Kaggle](https://www.kaggle.com/datasets/onlyrohit/crimes-in-chicago?resource=download&fbclid=IwAR2CbYaDRwKgWVlj5yJsYn1m2VMwNvXyhPBZDzCBRVG-WABM_ihdljQ-qzs) , which reports incidents of crime that occured in the City of Chicago from 2010 to present. On this analysis, we will use the data that contains the crimes that took place from 2020 to 2022. Furthermore, data from  [Wikipedia](https://en.wikipedia.org/wiki/Community_areas_in_Chicago) is also used, in order to use the population of each community area of Chicago on the analysis. 
+The data for this analysis is taken from the source [Kaggle](https://www.kaggle.com/datasets/onlyrohit/crimes-in-chicago?resource=download&fbclid=IwAR2CbYaDRwKgWVlj5yJsYn1m2VMwNvXyhPBZDzCBRVG-WABM_ihdljQ-qzs), which reports incidents of crime that occured in the City of Chicago from 2010 to present. On this analysis, we will use the data that contains the crimes that took place from 2020 to 2022. Furthermore, data from  [Wikipedia](https://en.wikipedia.org/wiki/Community_areas_in_Chicago) is also used, in order to use the population of each community area of Chicago on the analysis. 
 
 The analysis is uploaded in 3 separate files due to maximum capacity constraints. 
   
@@ -75,6 +75,8 @@ Using a bar chart of Plotly, we can find out which area records the most crime i
 <img src="https://user-images.githubusercontent.com/72870088/212785296-db7f4404-7f86-4436-9439-a47d3418d41e.PNG" width="600" height= "250" alt="Image Alt Text">
 
 West Side is by far the busiest area, and on the contrary, the least crime incidents are recorded in the north. 
+
+**2.5 Work in progress..**
 
 More plots and further analysis are available on the dashboards files.
 
