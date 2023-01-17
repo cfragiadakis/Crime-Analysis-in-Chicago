@@ -68,7 +68,7 @@ Our findings suggest that criminals are more active during the early afternoon a
 
 If we want, we can be more specific and add more parameters (for example when the location is "Residence" or "Apartment")
 
-**2.4 In which area occur the most crime incidents**
+**2.4 In which area the most crime incidents are recorded**
 
 Using a bar chart of Plotly, we can find out which area records the most crime incidents in Chicago
 
@@ -76,9 +76,52 @@ Using a bar chart of Plotly, we can find out which area records the most crime i
 
 West Side is by far the busiest area, and on the contrary, the least crime incidents are recorded in the north. 
 
-**2.5 Work in progress..**
+**2.5 Crime heatmap of Chicago**
 
-More plots and further analysis are available on the dashboards files.
+With the Python library folium, we can create a heatmap of Chicago to visualize the density of criminal activity in the city. 
+
+<img src="https://user-images.githubusercontent.com/72870088/212914577-7ab9efd9-8dc9-4a73-806c-dccf724395a0.png" width="500" height= "599" alt="Image Alt Text">
+
+The most heavily affected part of Chicago is in the Central region, and upon zooming in the map we can find the North State Street that stands out as a hotspot. This street is one of the most popular shopping destinatons of the city, and is also the block with the most crime incidents recorded (particularly theft). 
 
 
+**2.6 Location analysis on a specific day**
+
+Proceeding with the analysis, we can become more specific and visualize the crimes that occured a specific day, on a specific location of Chicago. If we group our data by date, we will find out that the date with the most crime incidents occur on 31st of May 2020 (George Floyd protests). We can choose one of the 77 community areas, we will pick for this example Near West Side.
+
+<img src="https://user-images.githubusercontent.com/72870088/212920038-1c4dcf29-421f-45a2-b5a9-10aecd6c0be7.PNG" width="600" height= "328.5" alt="Image Alt Text">
+
+The first step is to visualize all the crimes that occured with a heatmap on the location. Next, using the latitude and longitude of these crimes, we find the centroid of these incidents and mark it with a black circle. In the case we have one ambulance or patrol car available, it would be most efficient to place it in the spot of this circle, for quickest average response time. Therefore, it would be beneficial to station emergency services between Eisenhover Expressway and South Ashland Avenue, in the event of similar situations in the future.
+
+Additional visualizations, deeper analysis and complete code are available on the dashboards files. While there is still room for further exploration, we have a solid understanding of the data, and we can continue with clustering. 
+
+
+# Step #3 Clustering
+Clustering is a technique that groups similar data points together without using pre-labeled information. This process organizes data into various sets based on how closely they resemble each other. We will apply this method to discover the similarities between different regions in Chicago by utilizing the types of crimes recorded in each area. 
+
+**3.1 Finding the optimal number of clusters**
+
+First, we have to find the K number, that will make our number of clusters optimal. To achieve this, we will use The Elbow method. The Elbow Method is a widely used approach to determine the ideal number of clusters in a given dataset. This method utilizes the Within Cluster Summed Squares (WCSS) parameter, which is calculated based on the location of the centroids of each group. The WCSS parameter decreases as the number of clusters increases. As more clusters are added, the difference in decrease of WCSS becomes less significant. The optimal number of clusters is reached when the decrease in WCSS is not significant.
+
+<img src="https://user-images.githubusercontent.com/72870088/212945388-18d8ae13-8f97-4235-af1c-80d7f75feaf5.PNG" width="500" height= "318.6" alt="Image Alt Text">
+
+Based on the image above, there is a significant difference when the number of clusters is 3. Once this number is reached, the distinction between clusters becomes less significant. In this example, the optimal number of clusters is 3.
+
+**3.2 Division of Chicago regions**
+
+We can observe the geographical location of each cluster with the help of a map created with the Plotly librady, in order to identify each region by its corresponding cluster colour assigned by the K-Means algorithm.
+
+<img src="https://user-images.githubusercontent.com/72870088/212947716-a8d6508a-4294-4655-a7d6-a62eaf075e1b.PNG" width="400" height= "518" alt="Image Alt Text">
+
+We can notice that there is a geographical relationship in the way our clusters are grouped, thus we can make observations about the division of them and the regions they contain. 
+
+ **Cluster 1**
+ 
+ **Regions:**  Far North Side, Far Southeast Side, South Side, Southwest Side
+ 
+The areas that participate in this cluster are located mainly in the Southern part of Chicago. These areas have the highest crime rates, and all of them are characterized by high incidents of battery
+
+ **Cluster 2**
+ 
+ **Regions:**  West Side
 
