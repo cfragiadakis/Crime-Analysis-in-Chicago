@@ -37,5 +37,45 @@ Once we load the data into dataframes and concat them into one, we use the head(
 Next, we have to merge df, with the pop dataframe to get the remaining columns. Full code is available on the uploaded files.
 
 # Step #2 Explore the data 
-At the beginning of a project, it is usual that we do not quite understand the data very well. For this reason, the following examples will help us understand better our data. 
+At the beginning of a project, it is usual to not quite understand the data very well. For this reason, the following examples will help us understand them better.
+
+**2.1 Primary Type frequency**
+
+The plot below shows the frequency of the Primary type labels that occur in our data 
+
+<img src="https://user-images.githubusercontent.com/72870088/212781303-07ffa1e6-ea2a-4184-a8d6-d0af7ab6313b.png" width="800" height="446" alt="Image Alt Text">
+
+We can easily observe that our data is highly imbalanced. This will affect the accuracy of the model that we will use later, so we have to consider this when we will measure its performance. 
+
+**2.2 Crime map of Chicago**
+
+Next, we can use the Plotly library of Python to create a Chicago crime map. For this purpose, we will use only the 4% of our data for this plot, due to the plugin's capacity constraints for processing data at the same time. The end result is an interactive map of Chicago that demonstrates how each crime type is distributed across the city. 
+
+Below we can see the distribution of the most often Primary type, which is Theft (as shown from the previous plot).
+
+<img src="https://user-images.githubusercontent.com/72870088/212782919-c51925ba-b7f3-4580-908d-85d282fbdcd7.PNG" width="600" height= "444" alt="Image Alt Text">
+
+We observe that theft is more intense in the east of Chicago, and next in the northeast. We can use this crime map to see the distribution of other crimes also. If we hover over a dot, we can see the details we have of the specific crime.  
+
+**2.3 At what time a crime occured**
+
+Wih the following plot we select the most common types of crime, and wee see how they behave throughout the day.
+
+<img src="https://user-images.githubusercontent.com/72870088/212784307-e5872f40-9fcf-4174-be16-7f35d9582cc2.PNG" width="800" height= "371" alt="Image Alt Text">
+
+Our findings suggest that criminals are more active during the early afternoon and midnight. The peak of the most common crime occurs most often at 19:00. Also, there are crimes such as "NARCOTICS" that occur rarely in the night, but most of the times in the day. 
+
+If we want, we can be more specific and add more parameters (for example when the location is "Residence" or "Apartment")
+
+**2.4 In which area occur the most crime incidents**
+
+Using a bar chart of Plotly, we can find out which area records the most crime incidents in Chicago
+
+<img src="https://user-images.githubusercontent.com/72870088/212785296-db7f4404-7f86-4436-9439-a47d3418d41e.PNG" width="600" height= "250" alt="Image Alt Text">
+
+West Side is by far the busiest area, and on the contrary, the least crime incidents are recorded in the north. 
+
+
+
+
 
