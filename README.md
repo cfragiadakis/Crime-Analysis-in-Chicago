@@ -46,7 +46,7 @@ The plot below shows the frequency of the Primary type labels that occur in our 
 
 <img src="https://user-images.githubusercontent.com/72870088/212781303-07ffa1e6-ea2a-4184-a8d6-d0af7ab6313b.png" width="800" height="446" alt="Image Alt Text">
 
-We can easily observe that our data is highly imbalanced. This will affect the accuracy of the model that we will use later, so we have to consider this when we will measure its performance. 
+Theft and battery are the most frequent crimes that occur in Chicago. We can easily observe that our data is highly imbalanced. This will affect the accuracy of the model that we will use later, so we have to consider this when we will measure its performance. 
 
 **2.2 Crime map of Chicago**
 
