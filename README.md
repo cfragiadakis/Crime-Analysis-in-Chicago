@@ -32,6 +32,7 @@ We can start by downloading the Chicago crime dataset on [kaggle.com](https://ww
 * **Hour:** We extract this from the date column, hour of the occurred incident
 
 Once we load the data into dataframes and concat them into one, we use the head() command to ensure that we can see the data 
+
 <img src="https://user-images.githubusercontent.com/72870088/212772185-76470cbd-9c47-4a2e-a150-29d3ed4ffb3f.PNG" width="656" height="437" alt="Image Alt Text">
 
 Next, we have to merge df, with the pop dataframe to get the remaining columns. Full code is available on the uploaded files.
@@ -75,7 +76,7 @@ Using a bar chart of Plotly, we can find out which area records the most crime i
 
 West Side is by far the busiest area, and on the contrary, the least crime incidents are recorded in the north. 
 
-
+More plots and further analysis is available on the dashboards files.
 
 
 
