@@ -70,7 +70,7 @@ If we want, we can be more specific and add more parameters (for example when th
 
 **2.4 In which area the most crime incidents are recorded**
 
-Using a bar chart of Plotly, we can find out which area records the most crime incidents in Chicago
+Using a bar chart of Plotly, we can find out which area records the most crime incidents in Chicago.
 
 <img src="https://user-images.githubusercontent.com/72870088/212785296-db7f4404-7f86-4436-9439-a47d3418d41e.PNG" width="600" height= "250" alt="Image Alt Text">
 
