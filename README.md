@@ -154,13 +154,16 @@ From our dataset, we will use in our model the features:
 
 Our model achieves 28% accuracy. At first glance, this might not seem very impressive, but considering that we have 33 types of crime and only 620.000 records in our dataset, the number is respectable. Lastly, let's observe some predictions made by our model and compare them to the actual crime types.
 
-<img src="https://user-images.githubusercontent.com/72870088/213054671-6daa337b-2cc6-43eb-9cfa-f7ef42296fe3.PNG" width="191" height= "200" alt="Image Alt Text">
+<img src="https://user-images.githubusercontent.com/72870088/213060442-bc155609-2078-4293-8540-a61aa249c64f.PNG" width="191" height= "200" alt="Image Alt Text">
 
-Our model mostly predicts the labels of crimes of 0 and 1. This is also confirmed by the confusion matrix below. 
+Our model mostly predicts the labels of crimes of 1 and 8. This is also confirmed by the confusion matrix below. 
 
-<img src="https://user-images.githubusercontent.com/72870088/213055049-51be04d4-faeb-4024-a242-1ce7f9c4e0aa.PNG" width="574" height= "400" alt="Image Alt Text">
+<img src="https://user-images.githubusercontent.com/72870088/213060395-68f942bd-3aab-4d87-9cc8-ff4c2a8b05e8.PNG" width="574" height= "400" alt="Image Alt Text">
 
-The confusion matrix shows that our model frequently predicts crime categories 0 and 1, neglecting the rest crime types. This is due to the uneven distribution of crime types in the training data.
+
+
+
+The confusion matrix shows that our model frequently predicts crime categories 1 and 8, neglecting the rest crime types. This is due to the uneven distribution of crime types in the training data.
 
 
 
