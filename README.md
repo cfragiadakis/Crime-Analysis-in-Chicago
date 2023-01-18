@@ -14,7 +14,7 @@ The analysis is uploaded in 3 separate files due to maximum capacity constraints
 
 # Step 1: Load the Data
 
-We can start by downloading the Chicago crime dataset on [kaggle.com](https://www.kaggle.com/). Once the dataset is downloaded, we place the CSV files in our working folder. The dataset contains all the incidents of crime that occured in Chicago from 2010 to present. We will use only the CSV's from 2020 to 2022. Once we have succesfully read the files, we exclude the columns that we will not use for our analysis (for example "Ward", "District"). The columns that remain in our dataset are: 
+We can start by downloading the Chicago crime dataset on [kaggle.com](https://www.kaggle.com/). Once the dataset is downloaded, we place the CSV files in our working folder. The dataset contains all the incidents of crime that occured in Chicago from 2010 to present. We will use only the CSV's from 2020 to 2022. Once we have successfully read the files, we exclude the columns that we will not use for our analysis (for example "Ward", "District"). The columns that remain in our dataset are: 
 * **ID:** Unique identifier of the record
 * **Date:** Timestamp of the crime incident
 * **Block:** The block address of the crime incident
@@ -60,7 +60,7 @@ We observe that theft is more intense in the east of Chicago, and next in the no
 
 **2.3 At what time a crime occured**
 
-Wih the following plot we select the most common types of crime, and wee see how they behave throughout the day.
+With the following plot we select the most common types of crime, and we see how they behave throughout the day.
 
 <img src="https://user-images.githubusercontent.com/72870088/212784307-e5872f40-9fcf-4174-be16-7f35d9582cc2.PNG" width="800" height= "371" alt="Image Alt Text">
 
@@ -82,16 +82,16 @@ With the Python library folium, we can create a heatmap of Chicago to visualize 
 
 <img src="https://user-images.githubusercontent.com/72870088/212914577-7ab9efd9-8dc9-4a73-806c-dccf724395a0.png" width="599" height= "400" alt="Image Alt Text">
 
-The most heavily affected part of Chicago is in the Central region, and upon zooming in the map we can find the North State Street that stands out as a hotspot. This street is one of the most popular shopping destinatons of the city, and is also the block with the most crime incidents recorded (particularly theft). 
+The most heavily affected part of Chicago is in the Central region, and upon zooming in the map we can find the North State Street that stands out as a hotspot. This street is one of the most popular shopping destinations of the city, and is also the block with the most crime incidents recorded (particularly theft). 
 
 
 **2.6 Location analysis on a specific day**
 
-Proceeding with the analysis, we can become more specific and visualize the crimes that occured a specific day, on a specific location of Chicago. If we group our data by date, we will find out that the date with the most crime incidents occur on 31st of May 2020 (George Floyd protests). We can choose one of the 77 community areas, we will pick for this example Near West Side.
+Proceeding with the analysis, we can become more specific and visualize the crimes that occurred a specific day, on a specific location of Chicago. If we group our data by date, we will find out that the date with the most crime incidents occur on 31st of May 2020 (George Floyd protests). We can choose one of the 77 community areas, we will pick for this example Near West Side.
 
 <img src="https://user-images.githubusercontent.com/72870088/212920038-1c4dcf29-421f-45a2-b5a9-10aecd6c0be7.PNG" width="600" height= "328.5" alt="Image Alt Text">
 
-The first step is to visualize all the crimes that occured with a heatmap on the location. Next, using the latitude and longitude of these crimes, we find the centroid of these incidents and mark it with a black circle. In the case we have one ambulance or patrol car available, it would be most efficient to place it in the spot of this circle, for quickest average response time. Therefore, it would be beneficial to station emergency services between Eisenhover Expressway and South Ashland Avenue, in the event of similar situations in the future.
+The first step is to visualize all the crimes that occurred with a heatmap on the location. Next, using the latitude and longitude of these crimes, we find the centroid of these incidents and mark it with a black circle. In case we have one ambulance or patrol car available, it would be most efficient to place it in the spot of this circle, for quickest average response time. Therefore, it would be beneficial to station emergency services between Eisenhover Expressway and South Ashland Avenue, in the event of similar situations in the future.
 
 Additional visualizations, deeper analysis and complete code are available on the dashboards files. While there is still room for further exploration, we have a solid understanding of the data, and we can continue with clustering. 
 
