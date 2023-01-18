@@ -12,7 +12,7 @@ The analysis is uploaded in 3 separate files due to maximum capacity constraints
  [Clustering and Random Forest Classifier predictive model](https://github.com/cfragiadakis/Crime-Analysis-in-Chicago/blob/main/Clustering%20and%20Random%20Forest%20Classifier.ipynb)
 
 
-# Step #1 Load the Data
+# Step 1 Load the Data
 
 We can start by downloading the Chicago crime dataset on [kaggle.com](https://www.kaggle.com/). Once the dataset is downloaded, we place the CSV files in our working folder. The dataset contains all the incidents of crime that occured in Chicago from 2010 to present. We will use only the CSV's from 2020 to 2022. Once we have succesfully read the files, we exclude the columns that we will not use for our analysis (for example "Ward", "District"). The columns that remain in our dataset are: 
 * **ID:** Unique identifier of the record
@@ -37,7 +37,7 @@ Once we load the data into dataframes and concat them into one dropping na value
 
 Next, we have to merge df, with the pop dataframe to get the remaining columns. Full code is available on the uploaded files.
 
-# Step #2 Explore the data 
+# Step 2 Explore the data 
 At the beginning of a project, it is usual to not quite understand the data very well. For this reason, the following examples will help us understand them better.
 
  **2.1 Primary Type frequency**
@@ -96,7 +96,7 @@ The first step is to visualize all the crimes that occured with a heatmap on the
 Additional visualizations, deeper analysis and complete code are available on the dashboards files. While there is still room for further exploration, we have a solid understanding of the data, and we can continue with clustering. 
 
 
-# Step #3 Clustering
+# Step 3 Clustering
 Clustering is a technique that groups similar data points together without using pre-labeled information. This process organizes data into various sets based on how closely they resemble each other. We will apply this method to discover the similarities between different regions in Chicago by utilizing the types of crimes recorded in each area. 
 
  **3.1 Finding the optimal number of clusters**
@@ -134,7 +134,7 @@ The areas that participate in this cluster are located mainly in the southern pa
   The last  cluster includes the areas that make up the northern part of Chicago, as well as its center. These areas are grouped into a cluster due to their     comparatively low  number of recorded crimes than the rest of the city, with theft being the most frequent type of crime recorded. 
   
 
-# Step #4 Prediction model 
+# Step 4 Prediction model 
 
 Our target is to develop a model that can make predictions with high accuracy. To achieve this, we use Random Forest Classifier. Random Forest is a machine learning  technique, used to solve classification and regression problems. It combines multiple decision trees and uses ensemble learning, which combines multiple classifiers to tackle complex problems. The algorithm can only handle integer and boolean values, but no categorical data. Therefore, we need to prepare our data before utilizing Random Forest. 
 
