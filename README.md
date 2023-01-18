@@ -5,11 +5,11 @@ The data for this analysis is taken from the source [Kaggle](https://www.kaggle.
 
 The analysis is uploaded in 3 separate files due to maximum capacity constraints. 
   
- [Dashboards](https://github.com/cfragiadakis/Crime-Analysis-in-Chicago/blob/main/Chicago%20Dashboards.ipynb)
+ [Dashboards](https://github.com/cfragiadakis/Crime-Analysis-in-Chicago/blob/main/Part%201%20Dashboards.ipynb)
  
- [Dashboards 2nd part](https://github.com/cfragiadakis/Crime-Analysis-in-Chicago/blob/main/Dashboards%202nd%20page.ipynb)
+ [Dashboards 2](https://github.com/cfragiadakis/Crime-Analysis-in-Chicago/blob/main/Part%202%20Dashboards%20.ipynb)
  
- [Clustering and Random Forest Classifier predictive model](https://github.com/cfragiadakis/Crime-Analysis-in-Chicago/blob/main/Clustering%20and%20Random%20Forest%20Classifier.ipynb)
+ [Clustering & Random Forest Classifier predictive model](https://github.com/cfragiadakis/Crime-Analysis-in-Chicago/blob/main/Part%203%20Clustering%20%26%20Random%20Forest%20Classifier.ipynb)
 
 
 # Step 1: Load the Data
