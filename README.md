@@ -154,12 +154,11 @@ From our dataset, we will use in our model the features:
 
 Our model achieves 28% accuracy. At first glance, this might not seem very impressive, but considering that we have 32 types of crime and only 620.000 records in our dataset, the number is respectable. Lastly, let's observe some predictions made by our model and compare them to the actual crime types.
 
-<img src="https://user-images.githubusercontent.com/72870088/213060442-bc155609-2078-4293-8540-a61aa249c64f.PNG" width="191" height= "200" alt="Image Alt Text">
+<img src="https://user-images.githubusercontent.com/72870088/213156193-e159de51-2df7-4f3b-b6fd-2667289a4712.PNG" width="191" height= "200" alt="Image Alt Text">
 
 Our model mostly predicts the labels of crimes of 1 and 8. This is also confirmed by the confusion matrix below. 
 
-<img src="https://user-images.githubusercontent.com/72870088/213060395-68f942bd-3aab-4d87-9cc8-ff4c2a8b05e8.PNG" width="574" height= "400" alt="Image Alt Text">
-
+<img src="https://user-images.githubusercontent.com/72870088/213156204-9bdc4705-d603-4a3c-8bee-2968fe9d3858.PNG" width="574" height= "400" alt="Image Alt Text">
 
 
 
