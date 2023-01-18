@@ -152,7 +152,7 @@ From our dataset, we will use in our model the features:
  
 <img src="https://user-images.githubusercontent.com/72870088/213052794-35be8294-b853-48e9-8d2c-3adc6c856785.PNG" width="350" height= "110" alt="Image Alt Text">
 
-Our model achieves 28% accuracy. At first glance, this might not seem very impressive, but considering that we have 33 types of crime and only 620.000 records in our dataset, the number is respectable. Lastly, let's observe some predictions made by our model and compare them to the actual crime types.
+Our model achieves 28% accuracy. At first glance, this might not seem very impressive, but considering that we have 32 types of crime and only 620.000 records in our dataset, the number is respectable. Lastly, let's observe some predictions made by our model and compare them to the actual crime types.
 
 <img src="https://user-images.githubusercontent.com/72870088/213060442-bc155609-2078-4293-8540-a61aa249c64f.PNG" width="191" height= "200" alt="Image Alt Text">
 
@@ -170,7 +170,7 @@ The confusion matrix shows that our model frequently predicts crime categories 1
 
 # **Conclusion**
 
-This crime analysis presents multiple ways to visualize our data, so we can have a better understanding of them. We depicted our data in an interactive map of Chicago, using Plotly library, and we also used heatmaps in order to highlight hotspots. Furthermore, we divided the city of Chicago into 3 clusters based on the location and frequent crime types in each region. Finally, we trained a Random Forest Classifier model with 28% accuracy, a satisfying result, considering our dataset is highly imbalanced and contains 33 possible crime types. 
+This crime analysis presents multiple ways to visualize our data, so we can have a better understanding of them. We depicted our data in an interactive map of Chicago, using Plotly library, and we also used heatmaps in order to highlight hotspots. Furthermore, we divided the city of Chicago into 3 clusters based on the location and frequent crime types in each region. Finally, we trained a Random Forest Classifier model with 28% accuracy, a satisfying result, considering our dataset is highly imbalanced and contains 32 possible crime types. 
 
 
 
