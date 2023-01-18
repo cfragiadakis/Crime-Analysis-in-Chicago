@@ -109,7 +109,7 @@ Based on the image above, there is a significant difference when the number of c
 
 **3.2 Division of Chicago regions**
 
-We can observe the geographical location of each cluster with the help of a map created with the Plotly librady, in order to identify each region by its corresponding cluster colour assigned by the K-Means algorithm.
+We can observe the geographical location of each cluster with the help of a map created with the Plotly library, in order to identify each region by its corresponding cluster colour assigned by the K-Means algorithm.
 
 <img src="https://user-images.githubusercontent.com/72870088/212947716-a8d6508a-4294-4655-a7d6-a62eaf075e1b.PNG" width="400" height= "518" alt="Image Alt Text">
 
