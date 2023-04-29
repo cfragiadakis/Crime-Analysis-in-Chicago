@@ -136,7 +136,7 @@ The areas that participate in this cluster are located mainly in the southern pa
 
 # Step 4: Prediction model 
 
-Our target is to develop a model that can make predictions with high accuracy. To achieve this, we use Random Forest Classifier. Random Forest is a machine learning  technique, used to solve classification and regression problems. It combines multiple decision trees and uses ensemble learning, which combines multiple classifiers to tackle complex problems. The algorithm can only handle integer and boolean values, but no categorical data. Therefore, we need to prepare our data before utilizing Random Forest. 
+Our target is to develop a model that can make predictions of the type of a crime with high accuracy, giving to the model as input, features like date and the area. To achieve this, we use Random Forest Classifier. Random Forest is a machine learning  technique, used to solve classification and regression problems. It combines multiple decision trees and uses ensemble learning, which combines multiple classifiers to tackle complex problems. The algorithm can only handle integer and boolean values, but no categorical data. Therefore, we need to prepare our data before utilizing Random Forest. 
 
 From our dataset, we will use in our model the features: 
 
