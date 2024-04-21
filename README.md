@@ -31,10 +31,6 @@ We can start by downloading the Chicago crime dataset on [kaggle.com](https://ww
 * **Month:** We extract this from the date column, month of the occurred incident
 * **Hour:** We extract this from the date column, hour of the occurred incident
 
-Once we load the data into dataframes and concat them into one dropping na values, we use the head() command to ensure that we can see the data. 
-
-<img src="https://user-images.githubusercontent.com/72870088/213057882-cb3ea156-7358-449c-ab4f-dbb113c7a029.PNG" width="510" height="354" alt="Image Alt Text">
-
 Next, we have to merge df, with the pop dataframe to get the remaining columns. Full code is available on the uploaded files.
 
 # Step 2: Explore the data 
@@ -169,7 +165,7 @@ The confusion matrix shows that our model frequently predicts crime categories 1
 
 # **Conclusion**
 
-This crime analysis presents multiple ways to visualize our data, so we can have a better understanding of them. We depicted our data in an interactive map of Chicago, using Plotly library, and we also used heatmaps in order to highlight hotspots. Furthermore, we divided the city of Chicago into 3 clusters based on the location and frequent crime types in each region. Finally, we trained a Random Forest Classifier model with 28% accuracy, a satisfying result, considering our dataset is highly imbalanced and contains 32 possible crime types. 
+This crime analysis presents multiple ways to visualize our data, so we can have a better understanding of them. We depicted our data in an interactive map of Chicago, using Plotly library, and heatmaps were used in order to highlight hotspots. Furthermore, we divided the city of Chicago into 3 clusters based on the location and frequent crime types in each region. Finally, we trained a Random Forest Classifier model with 28% accuracy, a satisfying result, considering our dataset is highly imbalanced and contains 32 possible crime types. 
 
 
 
