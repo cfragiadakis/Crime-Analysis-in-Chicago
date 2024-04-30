@@ -54,7 +54,7 @@ Below we can see the distribution of the most often Primary type, which is Theft
 
 We observe that theft is more intense in the east of Chicago, and next in the northeast. We can use this crime map to see the distribution of other crimes also. If we hover over a dot, we can see the details we have of the specific crime.  
 
-**2.3 At what time a crime occured**
+**2.3 Time when a crime occured**
 
 With the following plot we select the most common types of crime, and we see how they behave throughout the day.
 
