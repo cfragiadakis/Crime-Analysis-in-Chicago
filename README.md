@@ -140,7 +140,7 @@ From our dataset, we will use in our model the features:
 
 * **Area:** In order to add area feature, we have to use dummy variables, since we have already mentioned that our model will be able to handle only integer and boolean values.
 
-* **Latitude & Longitude:** For the latitude and longitude features, we firstly remove the outliers of our dataset. Then, we convert them into polar coordinates. This allows our model to better understand the location.
+* **Latitude & Longitude:** For the latitude and longitude features, we firstly remove the outliers of our dataset. Then, we convert them into polar coordinates.
  
  Taking account of these features, the primary input to our crime type prediction model is the information of the time and location where a crime takes place. 
  
