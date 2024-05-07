@@ -5,7 +5,7 @@ We can find the data of this analysis on [Kaggle](https://www.kaggle.com/dataset
 
 ## 1. Load the Data
 
-We download the Chicago crime dataset on [kaggle.com](https://www.kaggle.com/). The dataset contains all the incidents of crime that occured in Chicago from 2010 to present. We will use only the CSV's from 2020 to 2022. Once we have successfully read the files, we exclude the columns that we will not use for our analysis. The columns that remain in our dataset are: 
+The dataset contains all the incidents of crime that occured in Chicago from 2010 to present. We will use only the CSV's from 2020 to 2022. Once we have successfully read the files, we exclude the columns that we will not use for our analysis. The columns that remain in our dataset are: 
 * **ID:** Unique identifier of the record
 * **Date:** Timestamp of the crime incident
 * **Block:** The block address of the crime incident
@@ -90,7 +90,7 @@ First, we have to find the K number, that will make our number of clusters optim
 
 <img src="https://user-images.githubusercontent.com/72870088/212945388-18d8ae13-8f97-4235-af1c-80d7f75feaf5.PNG" width="500" height= "318.6" alt="Image Alt Text">
 
-Based on the image above, there is a significant difference when the number of clusters is 3. Once this number is reached, the distinction between clusters becomes less significant. In this example, the optimal number of clusters is 3.
+Based on the image above, there is a significant difference when the number of clusters is 3. Once this number is reached, the distinction between clusters becomes less significant.
 
 **3.2 Division of Chicago regions**
 
