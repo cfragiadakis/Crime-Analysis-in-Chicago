@@ -1,20 +1,11 @@
 # Chicago Crime Analysis 
 * According to reports, Chicago is the 3rd most popular city in the USA, but is also considered as one of the violent ones. With population of 2.7M, Chicago is densely populated, and that has a direct impact on the crime rate. However, the crimes in the city are not evenly distributed, depending on various factors. It is important to find the location, the time and the type of crimes that are taking place. For this reason, we are going to embark on an exploratory data analysis of crimes in Chicago, and also make predictions about the type of crimes in this city, using Random Forest Classifier algorithm. 
 * Data source: 
-The data for this analysis is taken from the source [Kaggle](https://www.kaggle.com/datasets/onlyrohit/crimes-in-chicago?resource=download&fbclid=IwAR2CbYaDRwKgWVlj5yJsYn1m2VMwNvXyhPBZDzCBRVG-WABM_ihdljQ-qzs), which reports incidents of crime that occured in the City of Chicago from 2010 to present. On this analysis, we will use the data that contains the crimes that took place from 2020 to 2022. Furthermore, data from  [Wikipedia](https://en.wikipedia.org/wiki/Community_areas_in_Chicago) is utilized, in order to use the population of each community area of Chicago on the analysis. 
+We can find the data of this analysis on [Kaggle](https://www.kaggle.com/datasets/onlyrohit/crimes-in-chicago?resource=download&fbclid=IwAR2CbYaDRwKgWVlj5yJsYn1m2VMwNvXyhPBZDzCBRVG-WABM_ihdljQ-qzs), which reports incidents of crime that occured in the City of Chicago from 2010 to present. On this analysis, we will use the data that contains the crimes that took place from 2020 to 2022. Furthermore, data from  [Wikipedia](https://en.wikipedia.org/wiki/Community_areas_in_Chicago) is utilized, in order to use the population of each community area of Chicago on the analysis. 
 
-The analysis is uploaded in 3 separate files due to maximum capacity constraints. 
-  
- [Dashboards](https://github.com/cfragiadakis/Crime-Analysis-in-Chicago/blob/main/Part%201%20Dashboards.ipynb)
- 
- [Dashboards 2](https://github.com/cfragiadakis/Crime-Analysis-in-Chicago/blob/main/Part%202%20Dashboards%20.ipynb)
- 
- [Clustering & Random Forest Classifier predictive model](https://github.com/cfragiadakis/Crime-Analysis-in-Chicago/blob/main/Part%203%20Clustering%20%26%20Random%20Forest%20Classifier.ipynb)
+## 1. Load the Data
 
-
-# Step 1: Load the Data
-
-We can start by downloading the Chicago crime dataset on [kaggle.com](https://www.kaggle.com/). Once the dataset is downloaded, we place the CSV files in our working folder. The dataset contains all the incidents of crime that occured in Chicago from 2010 to present. We will use only the CSV's from 2020 to 2022. Once we have successfully read the files, we exclude the columns that we will not use for our analysis (for example "Ward", "District"). The columns that remain in our dataset are: 
+We download the Chicago crime dataset on [kaggle.com](https://www.kaggle.com/). The dataset contains all the incidents of crime that occured in Chicago from 2010 to present. We will use only the CSV's from 2020 to 2022. Once we have successfully read the files, we exclude the columns that we will not use for our analysis. The columns that remain in our dataset are: 
 * **ID:** Unique identifier of the record
 * **Date:** Timestamp of the crime incident
 * **Block:** The block address of the crime incident
@@ -31,10 +22,8 @@ We can start by downloading the Chicago crime dataset on [kaggle.com](https://ww
 * **Month:** We extract this from the date column, month of the occurred incident
 * **Hour:** We extract this from the date column, hour of the occurred incident
 
-Next, we have to merge df, with the pop dataframe to get the remaining columns. Full code is available on the uploaded files.
-
-# Step 2: Explore the data 
-At the beginning of a project, it is usual to not quite understand the data very well. For this reason, the following examples will help us understand them better.
+## 2. Explore the data 
+Understanding the data thoroughly at the project's beginning can be tricky. We thoroughly explore the data to discover insights into the patterns and trends of crime in Chicago.
 
  **2.1 Primary Type frequency**
 
@@ -46,7 +35,7 @@ Theft and battery are the most frequent crimes that occur in Chicago. We can eas
 
  **2.2 Crime map of Chicago**
 
-Next, we can use the Plotly library of Python to create a Chicago crime map. For this purpose, we will use only the 4% of our data for this plot, due to the plugin's capacity constraints for processing data at the same time. The end result is an interactive map of Chicago that demonstrates how each crime type is distributed across the city. 
+We use the `plotly` library of Python to create a Chicago crime map. For this purpose, we will use only the 4% of our data for this plot, due to the plugin's capacity constraints for processing data at the same time. The end result is an interactive map of Chicago that demonstrates how each crime type is distributed across the city. 
 
 Below we can see the distribution of the most often Primary type, which is Theft (as shown from the previous plot).
 
@@ -60,13 +49,13 @@ With the following plot we select the most common types of crime, and we see how
 
 <img src="https://user-images.githubusercontent.com/72870088/212784307-e5872f40-9fcf-4174-be16-7f35d9582cc2.PNG" width="800" height= "371" alt="Image Alt Text">
 
-Our findings suggest that criminals are more active during the early afternoon and midnight. The peak of the most common crime occurs most often at 19:00. Also, there are crimes such as "NARCOTICS" that occur rarely in the night, but most of the times in the day. 
+These findings suggest that criminals are more active during the early afternoon and midnight. The peak of the most common crime occurs most often at 19:00. Also, there are crimes such as "NARCOTICS" that occur rarely in the night, but most of the times in the day. 
 
 If we want, we can be more specific and add more parameters (for example when the location is "Residence" or "Apartment")
 
 **2.4 In which area the most crime incidents are recorded**
 
-Using a bar chart of Plotly, we can find out which area records the most crime incidents in Chicago.
+With this bar chart, we can find out which area records the most crime incidents in Chicago.
 
 <img src="https://user-images.githubusercontent.com/72870088/212785296-db7f4404-7f86-4436-9439-a47d3418d41e.PNG" width="600" height= "250" alt="Image Alt Text">
 
@@ -74,7 +63,7 @@ West Side is by far the busiest area, and on the contrary, the least crime incid
 
 **2.5 Crime heatmap of Chicago**
 
-With the Python library folium, we can create a heatmap of Chicago to visualize the density of criminal activity in the city. 
+With the library `folium`, we can create a heatmap of Chicago to visualize the density of criminal activity in the city. 
 
 <img src="https://user-images.githubusercontent.com/72870088/212914577-7ab9efd9-8dc9-4a73-806c-dccf724395a0.png" width="599" height= "400" alt="Image Alt Text">
 
@@ -83,7 +72,7 @@ The most heavily affected part of Chicago is in the Central region, and upon zoo
 
 **2.6 Location analysis on a specific day**
 
-Proceeding with the analysis, we can become more specific and visualize the crimes that occurred a specific day, on a specific location of Chicago. If we group our data by date, we will find out that the date with the most crime incidents occur on 31st of May 2020 (George Floyd protests). We can choose one of the 77 community areas, we will pick for this example Near West Side.
+We can become more specific and visualize the crimes that occurred a specific day, on a specific location of Chicago. If we group our data by date, we will find out that the date with the most crime incidents occur on 31st of May 2020 (George Floyd protests). We can choose one of the 77 community areas, we will pick for this example Near West Side.
 
 <img src="https://user-images.githubusercontent.com/72870088/212920038-1c4dcf29-421f-45a2-b5a9-10aecd6c0be7.PNG" width="600" height= "328.5" alt="Image Alt Text">
 
@@ -92,7 +81,7 @@ The first step is to visualize all the crimes that occurred with a heatmap on th
 Additional visualizations, deeper analysis and complete code are available on the dashboards files. While there is still room for further exploration, we have a solid understanding of the data, and we can continue with clustering. 
 
 
-# Step 3: Clustering
+## 3. Clustering
 Clustering is a technique that groups similar data points together without using pre-labeled information. This process organizes data into various sets based on how closely they resemble each other. We will apply this method to discover the similarities between different regions in Chicago by utilizing the types of crimes recorded in each area. 
 
  **3.1 Finding the optimal number of clusters**
@@ -105,7 +94,7 @@ Based on the image above, there is a significant difference when the number of c
 
 **3.2 Division of Chicago regions**
 
-We can observe the geographical location of each cluster with the help of a map created with the Plotly library, in order to identify each region by its corresponding cluster colour assigned by the K-Means algorithm.
+We can observe the geographical location of each cluster with the help of a map created with the `plotly` library, in order to identify each region by its corresponding cluster colour assigned by the K-Means algorithm.
 
 <img src="https://user-images.githubusercontent.com/72870088/212947716-a8d6508a-4294-4655-a7d6-a62eaf075e1b.PNG" width="400" height= "518" alt="Image Alt Text">
 
@@ -130,15 +119,15 @@ The areas that participate in this cluster are located mainly in the southern pa
   The last  cluster includes the areas that make up the northern part of Chicago, as well as its center. These areas are grouped into a cluster due to their     comparatively low  number of recorded crimes than the rest of the city, with theft being the most frequent type of crime recorded. 
   
 
-# Step 4: Prediction model 
+## 4. Prediction model 
 
-Our target is to develop a model that can make predictions of the type of a crime with high accuracy, giving to the model as input, features like date and the area. To achieve this, we use Random Forest Classifier. Random Forest is a machine learning  technique, used to solve classification and regression problems. It combines multiple decision trees and uses ensemble learning, which combines multiple classifiers to tackle complex problems. The algorithm can only handle integer and boolean values, but no categorical data. Therefore, we need to prepare our data before utilizing Random Forest. 
+Our target is to develop a model that can make predictions of the type of a crime with high accuracy, giving to the model as input, features like date and the area. To achieve this, we use Random Forest Classifier.
 
 From our dataset, we will use in our model the features: 
 
 * **Date & Time:** The date and time feature plays a crucial role in our model as it helps to understand certain patterns of crimes. For instance, the nightlife district experiences an increase in certain types of crimes during Saturday nights due to the presence of more people.
 
-* **Area:** In order to add area feature, we have to use dummy variables, since we have already mentioned that our model will be able to handle only integer and boolean values.
+* **Area:** In order to add area feature, we have to use dummy variables, since Random Forest Classifier cannot handle categorical data.
 
 * **Latitude & Longitude:** For the latitude and longitude features, we firstly remove the outliers of our dataset. Then, we convert them into polar coordinates.
  
@@ -152,20 +141,14 @@ Our model achieves 28% accuracy. At first glance, this might not seem very impre
 
 <img src="https://user-images.githubusercontent.com/72870088/213156193-e159de51-2df7-4f3b-b6fd-2667289a4712.PNG" width="191" height= "200" alt="Image Alt Text">
 
-Our model mostly predicts the labels of crimes of 1 and 4. This is also confirmed by the confusion matrix below. 
+The model mostly predicts the labels of crimes of 1 and 4. This is also confirmed by the confusion matrix below. 
 
 <img src="https://user-images.githubusercontent.com/72870088/213156204-9bdc4705-d603-4a3c-8bee-2968fe9d3858.PNG" width="574" height= "400" alt="Image Alt Text">
-
 
 
 The confusion matrix shows that our model frequently predicts crime categories 1 and 4, neglecting the rest crime types. This is due to the uneven distribution of crime types in the training data.
 
 
-
-
-# **Conclusion**
-
-This crime analysis presents multiple ways to visualize our data, so we can have a better understanding of them. We depicted our data in an interactive map of Chicago, using Plotly library, and heatmaps were used in order to highlight hotspots. Furthermore, we divided the city of Chicago into 3 clusters based on the location and frequent crime types in each region. Finally, we trained a Random Forest Classifier model with 28% accuracy, a satisfying result, considering our dataset is highly imbalanced and contains 32 possible crime types. 
 
 
 
