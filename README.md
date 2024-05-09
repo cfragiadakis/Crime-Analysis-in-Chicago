@@ -146,7 +146,7 @@ The model mostly predicts the labels of crimes of 1 and 4. This is also confirme
 <img src="https://user-images.githubusercontent.com/72870088/213156204-9bdc4705-d603-4a3c-8bee-2968fe9d3858.PNG" width="574" height= "400" alt="Image Alt Text">
 
 
-The confusion matrix shows that our model frequently predicts crime categories 1 and 4, neglecting the rest crime types. This is due to the uneven distribution of crime types in the training data.
+ We observe that our model often neglects the rest crime types. This is due to the uneven distribution of crime types in the training data.
 
 
 
