@@ -5,7 +5,7 @@ We can find the data of this analysis on [Kaggle](https://www.kaggle.com/dataset
 
 ## 1. Load the Data
 
-The dataset contains all the incidents of crime that occured in Chicago from 2010 to present. We will use only the CSV's from 2020 to 2022. Once we have successfully read the files, we exclude the columns that we will not use for our analysis. The columns that remain in our dataset are: 
+The dataset contains all the incidents of crime that occured in Chicago from 2010 to present. We will use only the CSV's from 2020 to 2022. The columns that we will use for the analysis are: 
 * **ID:** Unique identifier of the record
 * **Date:** Timestamp of the crime incident
 * **Block:** The block address of the crime incident
