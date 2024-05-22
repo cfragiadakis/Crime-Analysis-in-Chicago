@@ -51,8 +51,6 @@ With the following plot we select the most common types of crime, and we see how
 
 These findings suggest that criminals are more active during the early afternoon and midnight. The peak of the most common crime occurs most often at 19:00. Also, there are crimes such as "NARCOTICS" that occur rarely in the night, but most of the times in the day. 
 
-If we want, we can become more specific and add more parameters (for example when the location is "Residence" or "Apartment")
-
 **2.4 In which area the most crime incidents are recorded**
 
 With this bar chart, we can find out which area records the most crime incidents in Chicago.
